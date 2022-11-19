@@ -24,20 +24,20 @@ public class CodeGenerator {
         dataSourceConfig.setDbType(DbType.MYSQL);
         dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
         dataSourceConfig.setUsername("root");
-        dataSourceConfig.setPassword("Bing_yu2001");
-        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/yeb?useUnicode=true&characterEncoding=UTF-8");
+        dataSourceConfig.setPassword("Wang3344=");
+        dataSourceConfig.setUrl("jdbc:mysql://rm-wz97fj1gztvs64y8zro.mysql.rds.aliyuncs.com/w-yyb?characterEncoding=utf-8&useSSL=false&serverTimezone=Hongkong");
         autoGenerator.setDataSource(dataSourceConfig);
         GlobalConfig globalConfig = new GlobalConfig();
         globalConfig.setOpen(true); // 代码生成后打开目录
-        globalConfig.setOutputDir(System.getProperty("user.dir")+"/src/main/java");
-        globalConfig.setAuthor("Bing");
+        globalConfig.setOutputDir(System.getProperty("user.dir")+"/src/yeb-server/src/main/java");
+        globalConfig.setAuthor("wang");
 //        globalConfig.setIdType(IdType.ASSIGN_ID);// id 主键策略
 //        globalConfig.setDateType(DateType.ONLY_DATE); // 定义生成的实体类中日期类型
         globalConfig.setSwagger2(true);// 开启Swaggers模式
         globalConfig.setServiceName("%sService");
         autoGenerator.setGlobalConfig(globalConfig);
         PackageConfig packageConfig = new PackageConfig();
-        packageConfig.setParent("com.xxx");
+        packageConfig.setParent("com.xxx.server");
         packageConfig.setEntity("pojo");
         packageConfig.setMapper("mapper");
         packageConfig.setController("controller");
